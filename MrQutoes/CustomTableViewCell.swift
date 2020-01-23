@@ -7,29 +7,34 @@
 //
 
 import UIKit
+import Foundation
+
+protocol favouriteViewControllerDelegate: class {
+    func addFavouriteViewControler(index: Int)
+}
 
 class CustomTableViewCell: UITableViewCell {
-
+    var favViewController: FavouriteViewController?
+    
     @IBOutlet weak var quotesTextLbl: UILabel!
     @IBOutlet weak var quotesAuthorLbl: UILabel!
     @IBOutlet weak var favouriteImageView: UIImageView!
+    weak var delegate: favouriteViewControllerDelegate?
+    var index: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
     @IBAction func favouriteBtn(_ sender: Any) {
-        if favouriteImageView.image == #imageLiteral(resourceName: "twotone_favorite_black_36pt"){
-            favouriteImageView.image = #imageLiteral(resourceName: "baseline_favorite_black_36pt")
-        }else {
-            favouriteImageView.image = #imageLiteral(resourceName: "twotone_favorite_black_36pt")
-        }
+        delegate?.addFavouriteViewControler(index: index!.row)
+
     }
 }

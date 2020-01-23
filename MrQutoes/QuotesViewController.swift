@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+var quotesList : [Quotes] = []
 class QuotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     var quotesList : [Quotes] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -17,12 +18,20 @@ class QuotesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         let item = quotesList[indexPath.row]
         cell.quotesTextLbl.text = item.quotesText
         cell.quotesAuthorLbl.text = item.quotesAuthor
+        cell.delegate = self
+        cell.index = indexPath
+        if item.checked {
+            cell.favouriteImageView.image = #imageLiteral(resourceName: "baseline_favorite_black_36pt")
+            
+        } else {
+            cell.favouriteImageView.image = #imageLiteral(resourceName: "twotone_favorite_black_36pt")
+        }
         
-              return cell
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
@@ -30,12 +39,12 @@ class QuotesViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         addQuotes()
     }
     
-
+    
     func addQuotes(){
         let item1 = Quotes()
         item1.quotesAuthor = "– R. Brault"
@@ -71,5 +80,17 @@ class QuotesViewController: UIViewController, UITableViewDataSource, UITableView
         quotesList.append(item8)
         
     }
+    
+    
+    
+}
 
+extension QuotesViewController: favouriteViewControllerDelegate {
+    func addFavouriteViewControler(index: Int) {
+        quotesList[index].checked = !quotesList[index].checked
+        favQuotes.append(quotesList[index])
+        tableView.reloadData()
+    }
+    
+    
 }

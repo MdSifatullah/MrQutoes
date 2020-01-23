@@ -10,7 +10,8 @@ import UIKit
 
 class FavouriteCustomTableViewCell: UITableViewCell {
 
-    
+    @IBOutlet weak var favQuotesTxtLbl: UILabel!
+    @IBOutlet weak var favQuoteAuthorTxtLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -12,4 +12,5 @@ import Foundation
 class Quotes {
     var quotesText = ""
     var quotesAuthor = ""
+    var checked = false
 }

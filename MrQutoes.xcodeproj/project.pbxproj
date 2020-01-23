@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B03397F23D7014A0087E5F3 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B03397E23D7014A0087E5F3 /* QuotesViewController.swift */; };
+		0B0F3FB423D98D76006DACFF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0F3FB323D98D76006DACFF /* CustomView.swift */; };
 		0B70D14023D6F32600FECFFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70D13F23D6F32600FECFFD /* AppDelegate.swift */; };
 		0B70D14223D6F32600FECFFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70D14123D6F32600FECFFD /* SceneDelegate.swift */; };
 		0B70D14423D6F32600FECFFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B70D14323D6F32600FECFFD /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0B03397E23D7014A0087E5F3 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		0B0F3FB323D98D76006DACFF /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0B70D13C23D6F32500FECFFD /* MrQutoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrQutoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B70D13F23D6F32600FECFFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B70D14123D6F32600FECFFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				0BDA738A23D8309200FB0088 /* CustomTableViewCell.swift */,
 				0BDA738C23D84CED00FB0088 /* FavouriteViewController.swift */,
 				0BDA738E23D8518200FB0088 /* FavouriteCustomTableViewCell.swift */,
+				0B0F3FB323D98D76006DACFF /* CustomView.swift */,
 			);
 			path = MrQutoes;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				0BDA738F23D8518200FB0088 /* FavouriteCustomTableViewCell.swift in Sources */,
 				0BDA738B23D8309200FB0088 /* CustomTableViewCell.swift in Sources */,
 				0B70D14423D6F32600FECFFD /* ViewController.swift in Sources */,
+				0B0F3FB423D98D76006DACFF /* CustomView.swift in Sources */,
 				0B03397F23D7014A0087E5F3 /* QuotesViewController.swift in Sources */,
 				0BDA738923D82C9900FB0088 /* Quotes.swift in Sources */,
 				0BDA738D23D84CED00FB0088 /* FavouriteViewController.swift in Sources */,

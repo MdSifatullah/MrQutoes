@@ -27,7 +27,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="309"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJP-BV-pYt">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJP-BV-pYt" customClass="CustomView" customModule="MrQutoes" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="11" width="374" height="287"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-ge-Mta">
@@ -105,6 +105,10 @@
                                                 <constraint firstItem="FJP-BV-pYt" firstAttribute="bottom" secondItem="Scn-yS-uiF" secondAttribute="bottomMargin" id="vId-eU-Fpy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favQuoteAuthorTxtLbl" destination="vcm-mc-EKD" id="Z8Z-8L-gU7"/>
+                                            <outlet property="favQuotesTxtLbl" destination="Cfq-i7-qzh" id="Brc-eg-dXT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -122,7 +126,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1i8-C1-6o0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="rays" catalog="system" id="l2i-NA-rzX"/>
+                    <tabBarItem key="tabBarItem" title="" image="twotone_favorite_black_36pt" id="l2i-NA-rzX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SR-sK-y1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +151,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKK-yx-o2Y">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKK-yx-o2Y" customClass="CustomView" customModule="MrQutoes" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="11" width="374" height="278"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote" translatesAutoresizingMaskIntoConstraints="NO" id="ewa-qG-aJJ">
@@ -181,7 +185,6 @@
                                                         </stackView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="DkJ-4k-Rml">
                                                             <rect key="frame" x="309.5" y="228.5" width="17" height="15.5"/>
-                                                            <color key="tintColor" red="1" green="0.17736853829999999" blue="0.15833804909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15.81" id="RBx-Z3-MuQ"/>
                                                                 <constraint firstAttribute="width" constant="16.75" id="oV0-eE-ULO"/>
@@ -189,7 +192,6 @@
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twotone_favorite_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="mRE-QB-i2u">
                                                             <rect key="frame" x="272" y="228.5" width="17" height="15.5"/>
-                                                            <color key="tintColor" red="1" green="0.17736853829999999" blue="0.15833804909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15.81" id="aoo-J4-ebp"/>
                                                                 <constraint firstAttribute="width" constant="16.75" id="td0-gC-sQR"/>
@@ -251,6 +253,9 @@
                         <viewLayoutGuide key="safeArea" id="5mU-vS-9t5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="sYN-hV-90G"/>
+                    <connections>
+                        <outlet property="tableView" destination="FOb-ae-oyv" id="j1a-zA-RYn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPa-pS-YQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,7 +302,6 @@
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="outline_more_horiz_black_18dp" width="18" height="18"/>
         <image name="quote" width="50" height="43"/>
-        <image name="rays" catalog="system" width="64" height="60"/>
         <image name="share" width="50" height="47"/>
         <image name="twotone_favorite_black_36pt" width="36" height="36"/>
         <namedColor name="Color1">
